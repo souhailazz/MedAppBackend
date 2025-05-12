@@ -49,6 +49,11 @@ public List<Docteur> findBySpecialiteAndCity(String specialite, String city) {
 
     public Optional<Docteur> findByNumeroProfessionnel(String numeroProfessionnel) {
     return docteurRepository.findByNumeroProfessionnel(numeroProfessionnel);
-}    }
+}   
+public Docteur findById(Long id) {
+    return docteurRepository.findById(id).orElse(null);
+}
+
+}
   
 

@@ -58,4 +58,8 @@ public class PatientDAO implements IDAO<Patient, Integer> {
         }
         return Optional.of(patients.get(0));
     }
+public Patient findById(Long id) {
+    return entityManager.find(Patient.class, id);
+}
+
 }

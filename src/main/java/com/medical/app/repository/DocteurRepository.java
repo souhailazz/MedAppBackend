@@ -15,5 +15,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 public interface DocteurRepository extends JpaRepository<Docteur, Integer> {
     public List<Docteur> findBySpecialite(String specialite);
     public List<Docteur> findBySpecialiteAndCity(String specialite, String city);
-    public Optional<Docteur> findByNumeroProfessionnel(String numeroProfessionnel);  
+    public Optional<Docteur> findByNumeroProfessionnel(String numeroProfessionnel); 
+        Optional<Docteur> findById(Long id);
+
 }
